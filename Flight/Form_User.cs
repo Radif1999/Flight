@@ -9,9 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Flight {
-    public partial class Form1 : Form {
-        public Form1() {
+    public partial class Form_User : Form {
+        public Form_User() {
             InitializeComponent();
+        }
+
+        private void Form_User_FormClosing(object sender, FormClosingEventArgs e) {
+            this.Hide();
+            LoginIn_Form loginIn_ = new LoginIn_Form();
+            loginIn_.Show();
         }
     }
 }
